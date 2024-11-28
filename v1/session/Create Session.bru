@@ -1,0 +1,19 @@
+meta {
+  name: Create Session
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{host}}/api/v1/session
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "username": "user@example.com",
+    "password": "12345678",
+    "sessionName": "Test session"
+  }
+}

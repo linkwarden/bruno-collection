@@ -1,0 +1,22 @@
+meta {
+  name: Create Token
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{host}}/api/v1/tokens
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "name": "Token with 7 day expiry",
+    "expires": 0
+  }
+}

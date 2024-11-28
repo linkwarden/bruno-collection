@@ -1,0 +1,25 @@
+meta {
+  name: Update Tag
+  type: http
+  seq: 1
+}
+
+put {
+  url: {{host}}/api/v1/tags/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 14
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "name": "Test"
+  }
+}

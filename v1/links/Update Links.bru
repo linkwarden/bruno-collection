@@ -1,0 +1,56 @@
+meta {
+  name: Update Links
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{host}}/api/v1/links
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "links": [
+      {
+        "id": 25,
+        "name": "Example link",
+        "type": "url",
+        "url": "https://example.com",
+        "description": "Some additional thoughts...",
+        "tags": [
+          {
+            "name": "tag1"
+          },
+          {
+            "name": "tag2"
+          }
+        ],
+        "collection": {
+          "id": 4,
+          "ownerId": 1
+        },
+        // To unpin pass "pinnedBy": []
+        "pinnedBy": [
+          {
+            "id": 1
+          }
+        ]
+      }
+    ],
+    "removePreviousTags": true,
+    "newData": {
+      "collectionId": 2,
+      "tags": [
+        {
+          "name": "xyz"
+        }
+      ]
+    }
+  }
+}

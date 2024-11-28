@@ -1,0 +1,24 @@
+meta {
+  name: Get Users
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{host}}/api/v1/users
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "name": "Alex",
+    "email": "user@example.com",
+    "username": "test",
+    "password": "12345678"
+  }
+}

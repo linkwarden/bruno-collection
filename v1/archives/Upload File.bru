@@ -1,0 +1,39 @@
+meta {
+  name: Upload File
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{host}}/api/v1/archives/:id?format=1
+  body: multipartForm
+  auth: bearer
+}
+
+params:query {
+  format: 1
+  ~preview: 
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:multipart-form {
+  file: @file()
+}
+
+docs {
+  To upload a file, first make a `POST` request to the `/api/v1/links` route with assigning the `type` accordingly:
+  
+  ```
+  {
+    "type": "image",
+    // Rest of the body...
+  }
+  ```
+}
