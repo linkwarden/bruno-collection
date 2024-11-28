@@ -1,0 +1,17 @@
+meta {
+  name: Delete Links
+  type: http
+  seq: 6
+}
+
+delete {
+  url: {{host}}/api/v1/links
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "linkIds": [4,5]
+  }
+}

@@ -1,0 +1,23 @@
+meta {
+  name: Update File
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{host}}/api/v1/archives/:id?format=0
+  body: multipartForm
+  auth: inherit
+}
+
+params:query {
+  format: 0
+}
+
+params:path {
+  id: 2
+}
+
+body:multipart-form {
+  file: @file()
+}

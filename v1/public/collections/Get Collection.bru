@@ -1,0 +1,15 @@
+meta {
+  name: Get Collection
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/api/v1/public/collections/:id
+  body: none
+  auth: none
+}
+
+params:path {
+  id: 0
+}

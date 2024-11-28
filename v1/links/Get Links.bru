@@ -1,0 +1,25 @@
+meta {
+  name: Get Links
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{host}}/api/v1/links/
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~sort: 0
+  ~cursor: 0
+  ~collectionId: 0
+  ~tagId: 0
+  ~pinnedOnly: true
+  ~searchQueryString: asdasdasd
+  ~searchByName: true
+  ~searchByUrl: true
+  ~searchByDescription: true
+  ~searchByTextContent: true
+  ~searchByTags: true
+}

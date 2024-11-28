@@ -7,11 +7,7 @@ meta {
 put {
   url: {{host}}/api/v1/users/1
   body: json
-  auth: bearer
-}
-
-auth:bearer {
-  token: {{token}}
+  auth: inherit
 }
 
 body:json {

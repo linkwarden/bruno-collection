@@ -1,21 +1,15 @@
 meta {
-  name: Update Tag
+  name: Delete Tag
   type: http
-  seq: 1
+  seq: 3
 }
 
-put {
+delete {
   url: {{host}}/api/v1/tags/:id
-  body: json
+  body: none
   auth: inherit
 }
 
 params:path {
   id: 0
-}
-
-body:json {
-  {
-    "name": "Test2"
-  }
 }

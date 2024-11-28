@@ -1,0 +1,16 @@
+meta {
+  name: Get Tags
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/api/v1/public/collections/tags?collectionId=0
+  body: none
+  auth: none
+}
+
+params:query {
+  collectionId: 0
+  ~sort: 0
+}

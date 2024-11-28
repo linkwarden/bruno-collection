@@ -1,0 +1,19 @@
+meta {
+  name: Get File
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{host}}/api/v1/archives/:id?format=0
+  body: none
+  auth: inherit
+}
+
+params:query {
+  format: 0
+}
+
+params:path {
+  id: 0
+}

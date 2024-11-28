@@ -1,0 +1,24 @@
+meta {
+  name: Get Links
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/api/v1/public/collections/tags
+  body: none
+  auth: none
+}
+
+params:query {
+  ~sort: 0
+  ~cursor: 0
+  ~collectionId: 0
+  ~pinnedOnly: true
+  ~searchQueryString: asdasdasd
+  ~searchByName: true
+  ~searchByUrl: true
+  ~searchByDescription: true
+  ~searchByTextContent: true
+  ~searchByTags: true
+}

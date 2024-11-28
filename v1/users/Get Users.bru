@@ -7,11 +7,7 @@ meta {
 get {
   url: {{host}}/api/v1/users
   body: none
-  auth: bearer
-}
-
-auth:bearer {
-  token: {{token}}
+  auth: inherit
 }
 
 body:json {
