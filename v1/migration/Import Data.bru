@@ -1,0 +1,18 @@
+meta {
+  name: Import Data
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{host}}/api/v1/migration
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "format": 1,
+    "data": ""
+  }
+}

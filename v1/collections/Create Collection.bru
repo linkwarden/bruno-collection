@@ -7,11 +7,7 @@ meta {
 post {
   url: {{host}}/api/v1/collections
   body: json
-  auth: bearer
-}
-
-auth:bearer {
-  token: {{token}}
+  auth: inherit
 }
 
 body:json {

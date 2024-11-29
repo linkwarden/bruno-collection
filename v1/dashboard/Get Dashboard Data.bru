@@ -1,0 +1,11 @@
+meta {
+  name: Get Dashboard Data
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{host}}/api/v1/dashboard
+  body: none
+  auth: inherit
+}

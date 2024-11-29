@@ -1,0 +1,15 @@
+meta {
+  name: Delete Link
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{host}}/api/v1/links/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 0
+}

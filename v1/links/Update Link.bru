@@ -7,15 +7,11 @@ meta {
 put {
   url: {{host}}/api/v1/links/:id
   body: json
-  auth: bearer
+  auth: inherit
 }
 
 params:path {
-  id: 25
-}
-
-auth:bearer {
-  token: {{token}}
+  id: 0
 }
 
 body:json {

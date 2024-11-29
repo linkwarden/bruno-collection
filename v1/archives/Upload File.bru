@@ -5,22 +5,18 @@ meta {
 }
 
 post {
-  url: {{host}}/api/v1/archives/:id?format=1
+  url: {{host}}/api/v1/archives/:id?format=
   body: multipartForm
-  auth: bearer
+  auth: inherit
 }
 
 params:query {
-  format: 1
+  format: 
   ~preview: 
 }
 
 params:path {
-  id: 1
-}
-
-auth:bearer {
-  token: {{token}}
+  id: 0
 }
 
 body:multipart-form {

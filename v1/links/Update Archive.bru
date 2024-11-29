@@ -1,0 +1,15 @@
+meta {
+  name: Update Archive
+  type: http
+  seq: 7
+}
+
+put {
+  url: {{host}}/api/v1/links/:id/archive
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 0
+}
