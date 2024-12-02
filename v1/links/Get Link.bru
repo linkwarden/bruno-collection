@@ -1,15 +1,15 @@
 meta {
-  name: Delete Link
+  name: Get Link
   type: http
-  seq: 8
+  seq: 2
 }
 
-delete {
+get {
   url: {{host}}/api/v1/links/:id
   body: none
   auth: inherit
 }
 
 params:path {
-  id: 0
+  id: 6
 }
