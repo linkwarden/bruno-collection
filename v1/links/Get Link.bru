@@ -1,0 +1,15 @@
+meta {
+  name: Get Link
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{host}}/api/v1/links/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 6
+}
